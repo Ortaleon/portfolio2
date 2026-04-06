@@ -1,0 +1,31 @@
+.features-card{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  row-gap: getEm(20);
+  background-color: var(--color-gray);
+  border-radius: var(--border-radius);
+  padding: getEm(30) getEm(30) 0;
+
+  @include mobile{
+    width: 70vw;
+  }
+
+  &__title{
+    line-height: getEm(30,24);
+    @include fluid-text(24)
+  }
+
+  &__description{
+    line-height: getEm(18,14);
+    @include fluid-text(14);
+  }
+
+  &__image{
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+  }
+
+}

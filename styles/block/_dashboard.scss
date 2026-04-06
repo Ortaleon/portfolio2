@@ -1,0 +1,62 @@
+.dashboard{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: getEm(90);
+
+  @include mobile{
+    grid-template-columns: 1fr;
+    justify-self: center;
+  }
+
+
+  &__body{
+    display: flex;
+    flex-direction: column;
+    row-gap: getEm(30);
+    max-width: getEm(450);
+    width: 100%;
+    margin-inline: auto;
+
+    @include mobile{
+      order: 1;
+    }
+  }
+  &__title{
+    margin-top: getEm(15,52);
+    font-weight: 600;
+    line-height: getEm(60,52);
+
+    @include mobile{
+      text-align: center;
+    }
+  }
+
+  &__list{
+    display: flex;
+    flex-direction: column;
+    row-gap: getEm(15);
+  }
+
+  &__item{
+    position: relative;
+    padding-left: getEm(15);
+    &::before{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 20%;
+
+      translate: -50%;
+      background: url('/images/icons/check.svg') center / cover no-repeat;
+      filter: brightness(0) saturate(100%) invert(58%) sepia(57%) saturate(938%) hue-rotate(121deg) brightness(98%) contrast(89%);
+      @include square(15px);
+    }
+  }
+
+  &__media{
+    @include mobile{
+      margin-inline: auto;
+      max-width: 70%;
+    }
+  }
+}

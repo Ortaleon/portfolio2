@@ -1,0 +1,23 @@
+.pagination{
+    &__list{
+      display: flex;
+      column-gap: getEm(10);
+    }
+
+    &__item{
+      position: relative;
+      width: 80px;
+      &::before{
+        position: absolute;
+        content: '';
+        width: 83px;
+        height: 2px;
+        background-color: var(--color-dark-shadow);
+      }
+      &--active{
+        &::before{
+          background-color: var(--color-dark);
+        }
+      }
+    }
+}

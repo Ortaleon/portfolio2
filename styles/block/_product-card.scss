@@ -1,0 +1,21 @@
+.product-card{
+  display: flex;
+  flex-direction: column;
+  row-gap: getEm(13);
+  padding: getEm(17) getEm(20);
+  background-color: var(--color-gray);
+  border-radius: var(--border-radius);
+  height: 100%;
+  &__icon{
+    color: var(--color-accent);
+    background-color: var(--color-light);
+    padding: 10px;
+    border-radius: 10px;
+    @include square(55px);
+  }
+  &__title{
+    line-height: getEm(25,18);
+    font-weight: 500;
+    @include fluid-text(18,16);
+  }
+}

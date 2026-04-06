@@ -1,0 +1,59 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: getEm(30) getEm(70);
+
+  &__nav{
+    display: inherit;
+    align-items: inherit;
+    column-gap: getEm(60);
+
+    &-list{
+      display: flex;
+      column-gap: getEm(25);
+
+      &--mobile{
+          @include abs-center();
+          text-align: center;
+          flex-direction: column;
+          row-gap: getEm(10);
+      }
+    }
+    &-link{
+      transition-duration: var(--transition-duration);
+      padding-block: getEm(10);
+
+      &:hover{
+        color: var(--color-accent);
+      }
+    }
+  }
+  &__mobile-dialog{
+    padding: getEm(30) var(--container-padding-x);
+  }
+  &__burger,
+  &__close{
+    @include square(40px);
+
+    position: relative;
+    border-radius: 50%;
+
+    &-icon{
+      @include square(20px);
+      @include abs-center;
+    }
+  }
+  &__burger{
+    background-color: var(--color-accent);
+  }
+  &__close{
+    float: right;
+  }
+  &__action{
+    display: flex;
+    align-items: center;
+    column-gap: getEm(30);
+  }
+
+}

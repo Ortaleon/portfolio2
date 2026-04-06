@@ -1,1 +1,18 @@
-@import 'fonts', 'globals', 'media', 'mixins', 'normalize', 'utils', 'variables';
+@import 'fonts', 'variables', 'mixins', 'globals', 'media', 'normalize', 'utils';
+
+@import 'block/header',
+        'block/logo',
+        'block/button',
+        'block/hero',
+        'block/features',
+        'block/features-card',
+        'block/role',
+        'block/dashboard',
+        'block/products',
+        'block/product-card',
+        'block/testimonials',
+        'block/testimonial-card',
+        'block/pagination',
+        'block/download',
+        'block/footer',
+        'block/subscribe';

@@ -1,0 +1,35 @@
+.subscribe{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: getEm(25);
+
+  @include mobile{
+    flex-direction: column;
+  }
+
+  &__title{
+    width: 100%;
+    @include mobile{
+      text-align: center;
+    }
+  }
+  &__form{
+    position: relative;
+  }
+  &__email{
+    height: var(--input-height);
+    max-width: getEm(585);
+    border-radius: var(--border-radius);
+    padding-inline: getEm(25) getEm(170);
+    outline: none;
+  }
+  &__button{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    top: 10px;
+    width: getEm(145);
+  }
+}

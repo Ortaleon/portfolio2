@@ -1,0 +1,44 @@
+.testimonials{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  background-color: var(--color-gray);
+  padding-block: getEm(35);
+  margin-bottom: getEm(90);
+
+  @include tablet{
+    flex-direction: column;
+  }
+
+  &__hand{
+    @include tablet{
+      width: 30%;
+    }
+    &--left{
+      @include tablet{
+        align-self: start;
+      }
+    }
+    &--right{
+      @include tablet{
+        align-self: end;
+      }
+    }
+  }
+  &__body{
+    padding-block: getEm(105) getEm(100);
+    display: flex;
+    flex-direction: column;
+    row-gap: getEm(55);
+    align-self: center;
+    max-width: getEm(706);
+
+    @include tablet{
+      padding-block: getEm(20);
+    }
+    @include mobile{
+      padding-inline: getEm(20);
+    }
+  }
+}

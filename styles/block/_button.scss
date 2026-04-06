@@ -1,0 +1,12 @@
+.button{
+  font-weight: 700;
+  background-color: var(--color-accent);
+  border-radius: var(--border-radius);
+  border: none;
+  padding: getEm(10) getEm(20);
+
+  &--alt{
+    background-color: #fff;
+    border: var(--border);
+  }
+}

@@ -1,0 +1,6 @@
+.logo{
+  &__image{
+    font-weight: 700;
+    @include fluid-text(18,18);
+  }
+}
